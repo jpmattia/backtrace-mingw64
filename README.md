@@ -2,7 +2,7 @@
 
 This library produces backtraces for program crashes.
 - For 64 bit compilations under an x86_64 architecture, use backtrace64.c in the "64bit" directory. 
-- For 32 bit compilations under an i386 architecture, use backtrace.c in the "64bit" directory. 
+- For 32 bit compilations under an i386 architecture, use backtrace.c in the "32bit" directory. 
 
 ## Usage
 For the 64 bit x86_64 architectures, compile the library like the following:
@@ -18,6 +18,7 @@ Similarly for 32 bit i386 architectures, compile like so:
     gcc -O2 -shared -Wall -o backtrace.dll backtrace.c -lbfd -liberty -limagehlp 
 
 and load the library at the beginning of your program
+
     LoadLibraryA("backtrace.dll");
 
 ## Example
